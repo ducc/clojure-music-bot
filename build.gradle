@@ -1,0 +1,21 @@
+plugins {
+  id 'gradle-clojure.clojure' version '0.3.0'
+}
+
+group = 'org.sample'
+version = '0.1.0-SNAPSHOT'
+description = 'FIXME: write description'
+
+repositories {
+  mavenCentral()
+  maven {
+    name = 'clojars'
+    url = 'https://clojars.org/repo/'
+  }
+}
+
+dependencies {
+  compile 'org.clojure:clojure:1.8.0'
+  testCompile 'junit:junit:4.12'
+  devCompile 'org.clojure:tools.namespace:0.3.0-alpha4'
+}
