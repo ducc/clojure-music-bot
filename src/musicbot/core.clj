@@ -4,11 +4,17 @@
         [net.dv8tion.jda.core JDABuilder AccountType JDA]
         [net.dv8tion.jda.core.hooks ListenerAdapter]))
 
+(defn compareMsgContent [event, check]
+    (.equals (-> event .getMessage .getContent) check))
+
+(defn sendMessage [event, message] 
+    (-> event .getTextChannel (.sendMessage message) .queue))
+
 (defn listener []
     (proxy [ListenerAdapter] []
         (onMessageReceived [event] 
-            (if (.equals (-> event .getMessage .getContent) "RONNIEPICKERING")
-                (-> event .getTextChannel (.sendMessage "DO YOU KNOW WHO I AM?") .queue)))))
+            (if (compareMsgContent event "RONNIEPICKERING")
+                (sendMessage event "DO YOU KNOW WHO I AM?")))))
 
 (defn -main
     [& args]
