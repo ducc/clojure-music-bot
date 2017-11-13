@@ -7,7 +7,7 @@ version = '0.1.0-SNAPSHOT'
 description = 'FIXME: write description'
 
 repositories {
-  mavenCentral()
+  jcenter()
   maven {
     name = 'clojars'
     url = 'https://clojars.org/repo/'
