@@ -8,5 +8,4 @@
     :repositories [[jcenter "https://jcenter.bintray.com/"]]
     :omit-source true
     :profiles {:uberjar {:aot :all}}
-    :main musicbot.core
-    )
+    :main musicbot.core)
