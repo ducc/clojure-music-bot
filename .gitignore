@@ -24,3 +24,5 @@
 /.vscode
 
 /target
+.lein-repl-history
+.nrepl-port
